@@ -24,4 +24,6 @@ def copyfile_to_onedir(srcpath, dstpath):
                 # 如果该文件未重复，那就直接拷贝就好。
                 shutil.copy(os.path.join(root, name), dstpath + '\\' + name)
  
-# copyfile_to_onedir('F:\\新建文件夹', "G:\\新建文件夹1")
+ 
+ 
+copyfile_to_onedir('E:\RobotLearning\张量', "E:\RobotLearning\Tensor")

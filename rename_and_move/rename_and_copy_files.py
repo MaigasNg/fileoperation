@@ -13,9 +13,9 @@ def rename_and_copy_files(source_directory, target_directory):
     # 递归遍历源文件夹及其子文件夹
     for root, dirs, files in os.walk(source_directory):
         for file in files:
-            if file == "audio.m4s":
+            if file.split('.')[-1].lower() == ".m4a":  # 判断文件扩展名
                 source_path = os.path.join(root, file)
-                new_name = f"audio{count}.m4s"
+                new_name = f"audio{count}.m4a"
                 renamed_path = os.path.join(root, new_name)
                 
                 os.rename(source_path, renamed_path)  # 重命名文件
